@@ -52,9 +52,9 @@ export default function RootLayout({
                 </div>
               </div>
               <div className="flex items-center space-x-4">
-                <div className="hidden md:block bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-4 py-2 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                  +92 306 2393268
-                </div>
+                <a href="https://wa.me/923062393268?text=hello%20i%20want%20help%20i%20want%20to%20order%20can%20we%20call%20now%20%3F" target="_blank" rel="noopener noreferrer" className="hidden md:block bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                  WhatsApp: +92 306 2393268
+                </a>
                 <div className="md:hidden">
                   <button
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -86,9 +86,9 @@ export default function RootLayout({
               <a href="/about" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-semibold transition-colors duration-200">About Us</a>
               <a href="/products" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-semibold transition-colors duration-200">Our Products</a>
               <a href="/support" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-semibold transition-colors duration-200">Get in Touch</a>
-              <div className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-4 py-2 rounded-lg font-semibold text-center mt-4">
-                +92 306 2393268
-              </div>
+              <a href="https://wa.me/923062393268?text=hello%20i%20want%20help%20i%20want%20to%20order%20can%20we%20call%20now%20%3F" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-lg font-semibold text-center mt-4 block">
+                WhatsApp: +92 306 2393268
+              </a>
             </div>
           </div>
         </nav>

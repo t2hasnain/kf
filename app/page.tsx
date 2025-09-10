@@ -388,7 +388,9 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <p className="font-semibold text-white">+92 306 2393268</p>
+                    <a href="https://wa.me/923062393268?text=hello%20i%20want%20help%20i%20want%20to%20order%20can%20we%20call%20now%20%3F" target="_blank" rel="noopener noreferrer" className="font-semibold text-white hover:text-green-300 transition-colors duration-300">
+                      +92 306 2393268
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">

@@ -25,7 +25,7 @@ export default function Support() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Phone Support</h3>
               <p className="text-gray-600 mb-4">Call us directly for immediate assistance</p>
-              <a href="tel:+923062393268" className="text-2xl font-bold text-[#6EC1E4] hover:text-[#A8E6CF] transition-colors duration-300">
+              <a href="https://wa.me/923062393268?text=hello%20i%20want%20help%20i%20want%20to%20order%20can%20we%20call%20now%20%3F" target="_blank" rel="noopener noreferrer" className="text-2xl font-bold text-green-600 hover:text-green-700 transition-colors duration-300">
                 +92 306 2393268
               </a>
               <p className="text-sm text-gray-500 mt-2">Mon-Fri: 9AM-6PM PST</p>

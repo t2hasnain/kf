@@ -181,7 +181,7 @@ export default function Home() {
               <div className="relative mb-6 mx-auto w-48 h-48">
                 <Image
                   src="/asad.jpg"
-                  alt="Asad Arif - COO"
+                  alt="Asad Arif - CFO"
                   width={192}
                   height={192}
                   className="w-full h-full object-cover rounded-full shadow-lg group-hover:shadow-2xl transition-shadow duration-300"
@@ -189,7 +189,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-teal-400/20 to-transparent rounded-full"></div>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Asad Arif</h3>
-              <p className="text-lg text-teal-400 font-semibold mb-4">COO</p>
+              <p className="text-lg text-teal-400 font-semibold mb-4">CFO</p>
               <p className="text-gray-600 max-w-sm mx-auto leading-relaxed">
                 Operations specialist with extensive experience in logistics and supply chain management.
                 Ensures seamless delivery and customer satisfaction across Pakistan.

@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export default function Products() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
+  const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
 
   // All product images in one array
   const allProducts = [
@@ -49,16 +49,8 @@ export default function Products() {
     "/TISSUES/IMG-20250910-WA0053.jpg"
   ];
 
-  const handleImageLoad = (src: string) => {
-    setLoadedImages(prev => new Set(prev).add(src));
-  };
-
   const handleImageError = (src: string) => {
-    setLoadedImages(prev => {
-      const newSet = new Set(prev);
-      newSet.delete(src);
-      return newSet;
-    });
+    setFailedImages(prev => new Set(prev).add(src));
   };
 
   const openModal = (imageSrc: string) => {
@@ -102,7 +94,7 @@ export default function Products() {
               <div
                 key={index}
                 className={`group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${
-                  !loadedImages.has(product) ? 'hidden' : ''
+                  failedImages.has(product) ? 'hidden' : ''
                 }`}
               >
                 <div className="relative h-64 overflow-hidden cursor-pointer" onClick={() => openModal(product)}>
@@ -112,7 +104,6 @@ export default function Products() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-300"
                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, (max-width: 1280px) 25vw, 20vw"
-                    onLoad={() => handleImageLoad(product)}
                     onError={() => handleImageError(product)}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -152,11 +143,11 @@ export default function Products() {
             ))}
           </div>
 
-          {loadedImages.size === 0 && (
+          {allProducts.length === failedImages.size && (
             <div className="text-center py-20">
               <div className="text-6xl mb-4">📦</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Loading Products...</h3>
-              <p className="text-gray-600">Please wait while we load your product gallery.</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">No Products Available</h3>
+              <p className="text-gray-600">All product images failed to load. Please try again later.</p>
             </div>
           )}
         </div>
